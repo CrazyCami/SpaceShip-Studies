@@ -12,4 +12,4 @@ The workflow in `.github/workflows/pages.yml` deploys the site when changes are 
 
 ## Study files
 
-Upload plain text, Markdown, or CSV files. The browser builds questions from `Question: ... | Answer: ...` lines, short definition lines (such as `Osmosis is ...`), and other complete study sentences. This lightweight first version does not parse PDF or Word documents; export those notes as text or Markdown first.
+Upload plain text, Markdown, or CSV files. The browser builds questions from `Question: ... | Answer: ...` lines, short definition lines (such as `Osmosis is ...`), and other complete study sentences. Add a preference such as “focus on definitions” or “make them hard” before uploading to choose supported formats and set the meteor speed for question difficulty. This lightweight first version does not parse PDF or Word documents or use an AI service; export those notes as text or Markdown first.

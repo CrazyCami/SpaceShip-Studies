@@ -45,7 +45,7 @@
         <div class="arena" id="arena">
           <div class="stars stars-a"></div><div class="stars stars-b"></div><div class="nebula"></div>
           <div class="arena-caption"><span>◉</span> SECTOR 07 — MEMORY BELT</div>
-          <div class="hint" id="hint"><span class="hint-key">←</span><span class="hint-key">→</span> MOVE <span class="hint-divider">·</span> <span class="hint-key">SPACE</span> FIRE <span class="hint-divider">·</span> CLICK A METEORITE TO ANSWER</div>
+          <div class="hint" id="hint"><span class="hint-key">←</span><span class="hint-key">→</span> MOVE <span class="hint-divider">·</span> <span class="hint-key">SPACE</span> FIRE STRAIGHT AHEAD</div>
           <div class="ship" id="ship" aria-label="Your gunship"><div class="ship-flame"></div><div class="ship-body"><i></i></div><div class="ship-wing left"></div><div class="ship-wing right"></div><div class="ship-cockpit"></div></div>
           <div class="laser-layer" id="laserLayer"></div>
           <div class="feedback" id="feedback" aria-live="polite"></div>
@@ -59,12 +59,14 @@
         <div class="upload-card" id="uploadCard">
           <div class="card-heading"><div class="card-icon">↥</div><div><h3>Bring your own universe</h3><p>Drop in your notes. We’ll turn them into targets.</p></div></div>
           <button class="dropzone" id="dropzone"><span class="upload-symbol">↑</span><span><strong>Drop your study files here</strong><small>or <u>browse files</u> · TXT, MD, CSV</small></span><span class="file-plus">＋</span></button>
+          <label class="preference-label" for="studyPreference">QUESTION STYLE &amp; DIFFICULTY <span>OPTIONAL</span></label>
+          <textarea id="studyPreference" class="preference-input" rows="2" placeholder="e.g. Focus on definitions and key terms; make them hard"></textarea>
           <input id="fileInput" type="file" accept=".txt,.md,.csv,.text,text/plain,text/markdown,text/csv" multiple hidden>
           <div class="file-status" id="fileStatus">Your files stay on this device.</div>
           <div class="or-divider"><span></span> OR TRY A SAMPLE FLIGHT <span></span></div>
           <div class="sample-row"><button class="sample-chip active" data-sample="biology"><span>🧬</span> BIOLOGY</button><button class="sample-chip" data-sample="space"><span>🪐</span> SPACE</button><button class="sample-chip" data-sample="history"><span>🏛</span> HISTORY</button></div>
         </div>
-        <div class="how-card"><div class="how-title"><span>✦</span> HOW TO PLAY</div><div class="step"><span class="step-number">01</span><div><strong>Read the mission</strong><p>A question appears above the asteroid belt.</p></div></div><div class="step"><span class="step-number">02</span><div><strong>Find the right answer</strong><p>Each meteorite carries a possible answer.</p></div></div><div class="step"><span class="step-number">03</span><div><strong>Lock on &amp; fire</strong><p>Move with ← → and fire with space. The pace picks up as you go!</p></div></div><div class="controls"><span><kbd>←</kbd><kbd>→</kbd> PILOT</span><span><kbd>SPACE</kbd> FIRE</span><span><kbd>CLICK</kbd> TARGET</span></div></div>
+        <div class="how-card"><div class="how-title"><span>✦</span> HOW TO PLAY</div><div class="step"><span class="step-number">01</span><div><strong>Read the mission</strong><p>A question appears above the asteroid belt.</p></div></div><div class="step"><span class="step-number">02</span><div><strong>Line up with an answer</strong><p>Meteorites arrive in spaced-out lanes.</p></div></div><div class="step"><span class="step-number">03</span><div><strong>Press space to fire</strong><p>Your shots travel straight ahead. Harder questions move slower and give you more time.</p></div></div><div class="controls"><span><kbd>←</kbd><kbd>→</kbd> PILOT</span><span><kbd>SPACE</kbd> FIRE STRAIGHT</span></div></div>
       </section>
       <footer><span>ORBIT ACADEMY <span class="footer-sep">/</span> MADE FOR CURIOUS MINDS</span><span>YOUR NOTES NEVER LEAVE YOUR BROWSER ✦</span></footer>
     </main>
