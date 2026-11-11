@@ -2,6 +2,8 @@
 
 A browser based space shooter that turns study notes into answer targets. The site is static and has no build step; uploaded files are read in the browser and are not sent to a server.
 
+**Play the game:** [crazycami.github.io/SpaceShip-Studies](https://crazycami.github.io/SpaceShip-Studies/)
+
 ## Play locally
 
 Open `index.html` in a browser, or serve this folder with any static web server.
