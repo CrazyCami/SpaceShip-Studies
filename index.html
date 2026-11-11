@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080d1c">
+  <meta name="description" content="Turn your notes into a space-shooter study game.">
+  <title>Orbit Academy — Study the stars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Orbit Academy home"><span class="brand-mark">✳</span><span>ORBIT<span class="brand-light">ACADEMY</span></span></a>
+      <div class="top-meta"><span class="live-dot"></span><span>FLIGHT SYSTEMS ONLINE</span><span class="version">V 1.0</span></div>
+      <button class="upload-top" id="uploadTop"><span>＋</span> LOAD YOUR NOTES</button>
+    </header>
+
+    <main id="home">
+      <section class="intro">
+        <div class="intro-copy">
+          <div class="eyebrow"><span>✦</span> YOUR NEXT STUDY SESSION, LAUNCHED</div>
+          <h1>Know your stuff.<br><span>Save the galaxy.</span></h1>
+          <p>Load your notes, lock in the right answers, and blast your way to a better memory.</p>
+        </div>
+        <div class="pilot-card"><div class="pilot-avatar">✦</div><div><span class="pilot-label">CADET RANK</span><strong id="rank">ROOKIE PILOT</strong></div><div class="rank-stars">✦ ✦ ✦</div></div>
+      </section>
+
+      <section class="mission-bar" aria-label="Study question">
+        <div class="mission-icon">01 <span> / MISSION</span></div>
+        <div class="question-wrap"><div class="question-label">TARGET QUESTION</div><h2 id="question">What is the powerhouse of the cell?</h2></div>
+        <div class="mission-tools"><button id="prevQ" class="icon-button" aria-label="Previous question">←</button><span id="qCount">01 / 05</span><button id="nextQ" class="icon-button" aria-label="Next question">→</button></div>
+      </section>
+
+      <section class="game-frame" aria-label="Space shooter study game">
+        <div class="game-hud">
+          <div class="hud-block"><span class="hud-label">SCORE</span><strong id="score">0000</strong></div>
+          <div class="hud-block streak"><span class="hud-label">STREAK</span><strong id="streak">× 00</strong></div>
+          <div class="wave-indicator"><span class="wave-dot"></span> WAVE <b id="wave">01</b></div>
+          <div class="hud-block lives"><span class="hud-label">SHIELDS</span><strong id="lives">◆ ◆ ◆</strong></div>
+        </div>
+        <div class="arena" id="arena">
+          <div class="stars stars-a"></div><div class="stars stars-b"></div><div class="nebula"></div>
+          <div class="arena-caption"><span>◉</span> SECTOR 07 — MEMORY BELT</div>
+          <div class="hint" id="hint"><span class="hint-key">←</span><span class="hint-key">→</span> MOVE <span class="hint-divider">·</span> <span class="hint-key">SPACE</span> FIRE <span class="hint-divider">·</span> CLICK A METEORITE TO ANSWER</div>
+          <div class="ship" id="ship" aria-label="Your gunship"><div class="ship-flame"></div><div class="ship-body"><i></i></div><div class="ship-wing left"></div><div class="ship-wing right"></div><div class="ship-cockpit"></div></div>
+          <div class="laser-layer" id="laserLayer"></div>
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+          <div class="countdown" id="countdown"><span>READY FOR LAUNCH?</span><button id="startGame">START MISSION <b>↗</b></button></div>
+          <div class="game-over" id="gameOver"><span>MISSION COMPLETE</span><strong id="finalScore">0000</strong><button id="replay">FLY AGAIN ↗</button></div>
+        </div>
+        <div class="game-footer"><span><i class="keyboard-icon">⌨</i> ARROW KEYS TO PILOT <span class="footer-sep">/</span> SPACEBAR TO FIRE</span><span class="speed-label">FLIGHT SPEED <span class="speed-meter"><i id="speedMeter"></i></span> <b id="speedText">1.0×</b></span></div>
+      </section>
+
+      <section class="below-grid">
+        <div class="upload-card" id="uploadCard">
+          <div class="card-heading"><div class="card-icon">↥</div><div><h3>Bring your own universe</h3><p>Drop in your notes. We’ll turn them into targets.</p></div></div>
+          <button class="dropzone" id="dropzone"><span class="upload-symbol">↑</span><span><strong>Drop your study files here</strong><small>or <u>browse files</u> · TXT, MD, CSV</small></span><span class="file-plus">＋</span></button>
+          <input id="fileInput" type="file" accept=".txt,.md,.csv,.text,text/plain,text/markdown,text/csv" multiple hidden>
+          <div class="file-status" id="fileStatus">Your files stay on this device.</div>
+          <div class="or-divider"><span></span> OR TRY A SAMPLE FLIGHT <span></span></div>
+          <div class="sample-row"><button class="sample-chip active" data-sample="biology"><span>🧬</span> BIOLOGY</button><button class="sample-chip" data-sample="space"><span>🪐</span> SPACE</button><button class="sample-chip" data-sample="history"><span>🏛</span> HISTORY</button></div>
+        </div>
+        <div class="how-card"><div class="how-title"><span>✦</span> HOW TO PLAY</div><div class="step"><span class="step-number">01</span><div><strong>Read the mission</strong><p>A question appears above the asteroid belt.</p></div></div><div class="step"><span class="step-number">02</span><div><strong>Find the right answer</strong><p>Each meteorite carries a possible answer.</p></div></div><div class="step"><span class="step-number">03</span><div><strong>Lock on &amp; fire</strong><p>Move with ← → and fire with space. The pace picks up as you go!</p></div></div><div class="controls"><span><kbd>←</kbd><kbd>→</kbd> PILOT</span><span><kbd>SPACE</kbd> FIRE</span><span><kbd>CLICK</kbd> TARGET</span></div></div>
+      </section>
+      <footer><span>ORBIT ACADEMY <span class="footer-sep">/</span> MADE FOR CURIOUS MINDS</span><span>YOUR NOTES NEVER LEAVE YOUR BROWSER ✦</span></footer>
+    </main>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
